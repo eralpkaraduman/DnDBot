@@ -1,6 +1,10 @@
 from telegram import *
+import os
+from dotenv import load_dotenv
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 
-updater = Updater(token="TOKEN")
+updater = Updater(token=TOKEN)
 dispatcher = updater.dispatcher
 
 monsterList = [] #list storing all monsters
